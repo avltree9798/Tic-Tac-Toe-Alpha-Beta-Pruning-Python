@@ -85,10 +85,10 @@ class Game(object):
         return False
     
     def is_O_won(self):
-        if (self.board[0][0] == self.board[1][1] and self.board[0][0] == self.board[2][2] and self.board[0][0] == 1) or (self.board[0][2] == self.board[1][1] and self.board[0][2] == self.board[2][0] and self.board[0][2] == 2):
+        if (self.board[0][0] == self.board[1][1] and self.board[0][0] == self.board[2][2] and self.board[0][0] == 2) or (self.board[0][2] == self.board[1][1] and self.board[0][2] == self.board[2][0] and self.board[0][2] == 2):
             return True
         for i in xrange(0,3):
-            if (self.board[i][0] == self.board[i][1] and self.board[i][0] == self.board[i][2] and self.board[i][0] == 1) or (self.board[0][i] == self.board[1][i] and self.board[0][i] == self.board[2][i] and self.board[0][i] == 2):
+            if (self.board[i][0] == self.board[i][1] and self.board[i][0] == self.board[i][2] and self.board[i][0] == 2) or (self.board[0][i] == self.board[1][i] and self.board[0][i] == self.board[2][i] and self.board[0][i] == 2):
                 return True
         return False
     
@@ -119,8 +119,8 @@ class Game(object):
             print("")
     
     def place_a_piece(self, node, player):
-        #1 = CPU
-        #2 = Player
+        #1 = X = CPU
+        #2 = O = Player
         self.board[node.y][node.x] = player
 
     
